@@ -13,18 +13,18 @@ Future<Null> main() async {
   MaterialPageRoute.debugEnableFadingRoutes = true;
 
   var store = await createStore();
-  runApp(new InKinoApp(store));
+  runApp(new DistrowatchApp(store));
 }
 
-class InKinoApp extends StatefulWidget {
-  InKinoApp(this.store);
+class DistrowatchApp extends StatefulWidget {
+  DistrowatchApp(this.store);
   final Store<AppState> store;
 
   @override
-  _InKinoAppState createState() => new _InKinoAppState();
+  _DistrowatchAppState createState() => new _DistrowatchAppState();
 }
 
-class _InKinoAppState extends State<InKinoApp> {
+class _DistrowatchAppState extends State<DistrowatchApp> {
   @override
   void initState() {
     super.initState();
@@ -36,9 +36,9 @@ class _InKinoAppState extends State<InKinoApp> {
     return new StoreProvider<AppState>(
       store: widget.store,
       child: new MaterialApp(
-        title: 'inKino',
+        title: 'Distrowatch',
         theme: new ThemeData(
-          primaryColor: new Color(0xFF1C306D),
+          primaryColor: new Color(0xFFF6EDC8),
           accentColor: new Color(0xFFFFAD32),
         ),
         home: new MainPage(),

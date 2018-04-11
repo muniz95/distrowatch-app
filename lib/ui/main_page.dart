@@ -8,7 +8,7 @@ import 'package:distrowatchapp/redux/app/app_state.dart';
 import 'package:distrowatchapp/redux/search/search_actions.dart';
 import 'package:distrowatchapp/ui/events/events_page.dart';
 import 'package:distrowatchapp/ui/showtimes/showtimes_page.dart';
-import 'package:distrowatchapp/ui/theater_list/inkino_drawer_header.dart';
+import 'package:distrowatchapp/ui/theater_list/distrowatch_drawer_header.dart';
 import 'package:distrowatchapp/ui/theater_list/theater_list.dart';
 
 class MainPage extends StatefulWidget {
@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: horizontalTitleAlignment,
           children: <Widget>[
-            new Text('inKino'),
+            new Text('Distrowatch'),
             subtitle,
           ],
         ),
@@ -155,7 +155,7 @@ class _MainPageState extends State<MainPage>
       ),
       drawer: new Drawer(
         child: new TheaterList(
-          header: new InKinoDrawerHeader(),
+          header: new DistrowatchDrawerHeader(),
           onTheaterTapped: () => Navigator.pop(context),
         ),
       ),
