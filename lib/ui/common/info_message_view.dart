@@ -13,7 +13,7 @@ class ErrorView extends InfoMessageView {
           actionButtonKey: tryAgainButtonKey,
           title: title ?? 'Oops!',
           description:
-              description ?? 'There was an error while\nloading movies.',
+              description ?? 'An error occoured.',
           onActionButtonTapped: onRetry,
         );
 }
@@ -35,15 +35,14 @@ class InfoMessageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
     var content = <Widget>[
       new CircleAvatar(
         child: new Icon(
           Icons.info_outline,
-          color: Colors.black54,
+          color: Colors.white,
           size: 52.0,
         ),
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.black,
         radius: 42.0,
       ),
       new Padding(
@@ -70,7 +69,7 @@ class InfoMessageView extends StatelessWidget {
           onPressed: onActionButtonTapped,
           child: new Text(
             'TRY AGAIN',
-            style: new TextStyle(color: theme.primaryColor),
+            style: new TextStyle(color: Colors.green),
           ),
         ),
       ));

@@ -26,20 +26,12 @@ class DistrosPageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Column(
       children: <Widget>[
-        // new Expanded(
-        //   child: new LoadingView(
-        //     status: viewModel.status,
-        //     loadingContent: new PlatformAdaptiveProgressIndicator(),
-        //     errorContent: new ErrorView(onRetry: viewModel.refreshDistros),
-        //     successContent: new DistrosList(viewModel.shows),
-        //   ),
-        // ),
         new Expanded(
           child: new LoadingView(
             status: viewModel.status,
-            loadingContent: new Text('loading: ${viewModel.status}'),
-            errorContent: new Text('error: ${viewModel.status}'),
-            successContent: new Text('success: ${viewModel.status}'),
+            loadingContent: new PlatformAdaptiveProgressIndicator(),
+            errorContent: new ErrorView(onRetry: viewModel.refreshDistros),
+            successContent: new DistrosList(viewModel.shows),
           ),
         ),
       ],
