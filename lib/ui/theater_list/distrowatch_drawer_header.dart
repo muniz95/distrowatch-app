@@ -10,7 +10,7 @@ class DistrowatchDrawerHeader extends StatefulWidget {
 
 class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
   static const String flutterUrl = 'https://flutter.io/';
-  static const String githubUrl = 'https://github.com/roughike/Distrowatch';
+  static const String githubUrl = 'https://github.com/muniz95/distrowatch-app';
   static final TextStyle linkStyle = new TextStyle(
     color: Colors.blue,
     decoration: TextDecoration.underline,
@@ -55,11 +55,11 @@ class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
         children: <Widget>[
           new Text(
             'Distrowatch',
-            style: textTheme.display1.copyWith(color: Colors.white70),
+            style: textTheme.display1.copyWith(color: Colors.black),
           ),
           new Text(
             'v1.0.1', // TODO: figure out a way to get this dynamically
-            style: textTheme.body2.copyWith(color: Colors.white),
+            style: textTheme.body2.copyWith(color: Colors.black),
           ),
         ],
       ),
@@ -72,16 +72,16 @@ class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
       children: <Widget>[
         new Icon(
           Icons.info_outline,
-          color: Colors.white70,
+          color: Colors.black54,
           size: 18.0,
         ),
         new Padding(
-          padding: const EdgeInsets.only(left: 8.0),
+          padding: const EdgeInsets.only(left: 4.0),
           child: new Text(
             'About',
             textAlign: TextAlign.end,
             style: new TextStyle(
-              color: Colors.white70,
+              color: Colors.black54,
               fontSize: 12.0,
             ),
           ),
@@ -122,7 +122,8 @@ class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          textColor: Theme.of(context).primaryColor,
+          // textColor: Theme.of(context).primaryColor,
+          textColor: Colors.black54,
           child: new Text('Okay, got it!'),
         ),
       ],
@@ -132,8 +133,8 @@ class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
   Widget _buildAboutText() {
     return new RichText(
       text: new TextSpan(
-        text: 'Distrowatch is the unofficial Finnkino client that '
-            'is minimalistic, fast, and delightful to use.\n\n',
+        text: 'Distrowatch is the main Linux, BSD and Unix-like '
+            'distros database and news portal.\n\n',
         style: new TextStyle(color: Colors.black87),
         children: <TextSpan>[
           new TextSpan(text: 'The app was developed with '),

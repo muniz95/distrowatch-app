@@ -60,6 +60,9 @@ class TheaterListContent extends StatelessWidget {
         var backgroundColor = isSelected
             ? const Color(0xFFEEEEEE)
             : Theme.of(context).canvasColor;
+        var textColor = isSelected
+            ? const Color(0xFF00EE00)
+            : Colors.black;
 
         return new Material(
           color: backgroundColor,
@@ -69,7 +72,10 @@ class TheaterListContent extends StatelessWidget {
               onTheaterTapped();
             },
             selected: isSelected,
-            title: new Text(theater.name),
+            title: new Text(
+              theater.name,
+              style: new TextStyle(color: textColor)
+            ),
           ),
         );
       },

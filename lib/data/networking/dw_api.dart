@@ -1,18 +1,19 @@
 import 'dart:async';
 
+import 'package:distrowatchapp/data/models/distro.dart';
 import 'package:distrowatchapp/data/models/event.dart';
 import 'package:distrowatchapp/data/models/show.dart';
 import 'package:distrowatchapp/data/models/theater.dart';
 import 'package:distrowatchapp/utils/http_utils.dart';
 import 'package:intl/intl.dart';
 
-class FinnkinoApi {
+class DwApi {
   static final DateFormat ddMMyyyy = new DateFormat('dd.MM.yyyy');
 
   static final Uri kScheduleBaseUrl =
-      new Uri.https('www.finnkino.fi', '/en/xml/Schedule');
+      new Uri.https('www.distrowatch.com', '/en/xml/Schedule');
   static final Uri kEventsBaseUrl =
-      new Uri.https('www.finnkino.fi', '/en/xml/Events');
+      new Uri.https('www.distrowatch.com', '/en/xml/Events');
 
   Future<List<Show>> getSchedule(Theater theater, DateTime date) async {
     var dt = ddMMyyyy.format(date ?? new DateTime.now());
@@ -45,5 +46,15 @@ class FinnkinoApi {
     );
 
     return Event.parseAll(response);
+  }
+
+  Future<List<Distro>> getDistros() async {
+    var response = await getRequest(
+      kEventsBaseUrl.replace(queryParameters: {
+        'listType': 'ComingSoon',
+      }),
+    );
+
+    return Distro.parseAll(response);
   }
 }

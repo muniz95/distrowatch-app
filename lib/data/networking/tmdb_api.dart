@@ -8,7 +8,6 @@ import 'package:distrowatchapp/utils/http_utils.dart';
 /// If this has a red underline, it means that the lib/tmdb_config.dart file
 /// is not present on the project. Refer to the README for instructions
 /// on how to do so.
-import 'package:distrowatchapp/tmdb_config.dart';
 
 class TMDBApi {
   static final String baseUrl = 'api.themoviedb.org';
@@ -29,7 +28,6 @@ class TMDBApi {
       baseUrl,
       '3/search/movie',
       <String, String>{
-        'api_key': TMDBConfig.apiKey,
         'query': movieTitle,
       },
     );
@@ -49,7 +47,6 @@ class TMDBApi {
     var actorUri = new Uri.https(
       baseUrl,
       '3/movie/$movieId/credits',
-      <String, String>{'api_key': TMDBConfig.apiKey},
     );
 
     var response = await getRequest(actorUri);

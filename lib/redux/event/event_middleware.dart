@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:distrowatchapp/data/models/theater.dart';
-import 'package:distrowatchapp/data/networking/finnkino_api.dart';
+import 'package:distrowatchapp/data/networking/dw_api.dart';
 import 'package:distrowatchapp/redux/app/app_state.dart';
 import 'package:distrowatchapp/redux/common_actions.dart';
 import 'package:distrowatchapp/redux/event/event_actions.dart';
@@ -9,7 +9,7 @@ import 'package:redux/redux.dart';
 
 class EventMiddleware extends MiddlewareClass<AppState> {
   EventMiddleware(this.api);
-  final FinnkinoApi api;
+  final DwApi api;
 
   @override
   Future<Null> call(Store<AppState> store, action, NextDispatcher next) async {

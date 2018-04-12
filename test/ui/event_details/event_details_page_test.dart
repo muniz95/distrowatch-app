@@ -96,12 +96,12 @@ void main() {
           show: new Show(
             start: new DateTime(2018),
             theaterAndAuditorium: 'Test theater',
-            url: 'https://finnkino.fi/test-tickets-url',
+            url: 'https://distrowatch.com/test-tickets-url',
           ),
         );
 
         await tester.tap(find.byKey(ShowtimeInformation.ticketsButtonKey));
-        expect(lastLaunchedTicketsUrl, 'https://finnkino.fi/test-tickets-url');
+        expect(lastLaunchedTicketsUrl, 'https://distrowatch.com/test-tickets-url');
       },
     );
 

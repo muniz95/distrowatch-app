@@ -24,7 +24,7 @@ void main() {
           'https://youtube.com/watch?v=oFa4C6OcuM4');
       expect(
         paris1517.images.portraitSmall,
-        'http://media.finnkino.fi/1012/Event_11881/portrait_small/The1517toParis_1080.jpg',
+        'http://media.distrowatch.com/1012/Event_11881/portrait_small/The1517toParis_1080.jpg',
       );
     });
   });
@@ -41,7 +41,7 @@ const String eventsXml = '''<?xml version="1.0"?>
         <dtLocalRelease>2018-02-16T00:00:00</dtLocalRelease>
         <Rating>12</Rating>
         <RatingLabel>12</RatingLabel>
-        <RatingImageUrl>https://media.finnkino.fi/images/rating_large_12.png</RatingImageUrl>
+        <RatingImageUrl>https://media.distrowatch.com/images/rating_large_12.png</RatingImageUrl>
         <LocalDistributorName>SF Film Finland Oy</LocalDistributorName>
         <GlobalDistributorName>SF Film Finland Oy</GlobalDistributorName>
         <ProductionCompanies>-</ProductionCompanies>
@@ -49,13 +49,13 @@ const String eventsXml = '''<?xml version="1.0"?>
         <Genres>Draama, Jännitys</Genres>
         <ShortSynopsis>Short synopsis goes here.</ShortSynopsis>
         <Synopsis>Synopsis goes here.</Synopsis>
-        <EventURL>http://www.finnkino.fi/event/302535/title/1517_pariisiin/</EventURL>
+        <EventURL>http://www.distrowatch.com/event/302535/title/1517_pariisiin/</EventURL>
         <Images>
-            <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_11881/portrait_small/The1517toParis_1080.jpg</EventSmallImagePortrait>
-            <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_11881/portrait_medium/The1517toParis_1080.jpg</EventMediumImagePortrait>
-            <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_11881/portrait_small/The1517toParis_1080.jpg</EventLargeImagePortrait>
-            <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_11881/landscape_small/The1517toParis_444.jpg</EventSmallImageLandscape>
-            <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_11881/landscape_large/The1517toParis_670.jpg</EventLargeImageLandscape>
+            <EventSmallImagePortrait>http://media.distrowatch.com/1012/Event_11881/portrait_small/The1517toParis_1080.jpg</EventSmallImagePortrait>
+            <EventMediumImagePortrait>http://media.distrowatch.com/1012/Event_11881/portrait_medium/The1517toParis_1080.jpg</EventMediumImagePortrait>
+            <EventLargeImagePortrait>http://media.distrowatch.com/1012/Event_11881/portrait_small/The1517toParis_1080.jpg</EventLargeImagePortrait>
+            <EventSmallImageLandscape>http://media.distrowatch.com/1012/Event_11881/landscape_small/The1517toParis_444.jpg</EventSmallImageLandscape>
+            <EventLargeImageLandscape>http://media.distrowatch.com/1012/Event_11881/landscape_large/The1517toParis_670.jpg</EventLargeImageLandscape>
         </Images>
         <Videos>
             <EventVideo>
@@ -121,11 +121,11 @@ const String eventsXml = '''<?xml version="1.0"?>
         <ContentDescriptors>
             <ContentDescriptor>
                 <Name>Violence</Name>
-                <ImageURL>https://media.finnkino.fi/images/content_Violence.png</ImageURL>
+                <ImageURL>https://media.distrowatch.com/images/content_Violence.png</ImageURL>
             </ContentDescriptor>
             <ContentDescriptor>
                 <Name>Disturbing</Name>
-                <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+                <ImageURL>https://media.distrowatch.com/images/content_Disturbing.png</ImageURL>
             </ContentDescriptor>
         </ContentDescriptors>
     </Event>
@@ -138,7 +138,7 @@ const String eventsXml = '''<?xml version="1.0"?>
         <dtLocalRelease>2017-12-25T00:00:00</dtLocalRelease>
         <Rating>7</Rating>
         <RatingLabel>7</RatingLabel>
-        <RatingImageUrl>https://media.finnkino.fi/images/rating_large_7.png</RatingImageUrl>
+        <RatingImageUrl>https://media.distrowatch.com/images/rating_large_7.png</RatingImageUrl>
         <LocalDistributorName>SF Film Finland Oy</LocalDistributorName>
         <GlobalDistributorName>SF Film Finland Oy</GlobalDistributorName>
         <ProductionCompanies>-</ProductionCompanies>
@@ -150,7 +150,7 @@ const String eventsXml = '''<?xml version="1.0"?>
             95 on osa virallista Suomi 100 -juhlavuoden ohjelmistoa.
 
             Rooleissa: Curt Lindström – Jens Hulten, Hannu Aravirta – Kari-Pekka Toivonen, Heikki Riihiranta – Pekka Huotari, Saku Koivu – Jon-Jon Geitel, Ville Peltonen – Akseli Kouki, Jere Lehtinen – Kustaa Tuohimaa, Timo Jutila – Joel Hirvonen, Janne Ojanen – Oskari Ojanen, Marko Palo – Valtteri Honka, Marko Kiprusoff – Karlo Haapiainen, Raimo Helminen – Sebastian Rejman, Sami Kapanen – Mikko Laine, Esa Keskinen – Topias Hirvelä, Hannu Virta – Jarkko Järvinen, Mika Nieminen – Victor Paul, Antti Törmänen – Lauri Talvio, Jukka Tammi – Lauri Tilkanen, Raimo Summanen – Akseli Mattila, Ari Sulander – Henri Nyqvist, Mika Strömberg – Rasmus Tarkiainen, Erik Hämäläinen – Tommi Lipasti, Petteri Nummelin – Ronny Roslöf, Janne Niinimaa – Kimi Vilkkula, Juha Ylönen – Mikko Lindbom, Jarmo Myllys – Hannes Suominen, Tero Lehterä – Roman Tiinus</Synopsis>
-        <EventURL>http://www.finnkino.fi/event/302465/title/95/</EventURL>
+        <EventURL>http://www.distrowatch.com/event/302465/title/95/</EventURL>
         <Images>
             <!-- Testing empty images element -->
             <SomeOtherImage>test</SomeOtherImage>
@@ -197,7 +197,7 @@ const String eventsXml = '''<?xml version="1.0"?>
         <ContentDescriptors>
             <ContentDescriptor>
                 <Name>Disturbing</Name>
-                <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+                <ImageURL>https://media.distrowatch.com/images/content_Disturbing.png</ImageURL>
             </ContentDescriptor>
         </ContentDescriptors>
     </Event>
@@ -210,7 +210,7 @@ const String eventsXml = '''<?xml version="1.0"?>
         <dtLocalRelease>2018-01-12T00:00:00</dtLocalRelease>
         <Rating>16</Rating>
         <RatingLabel>16</RatingLabel>
-        <RatingImageUrl>https://media.finnkino.fi/images/rating_large_16.png</RatingImageUrl>
+        <RatingImageUrl>https://media.distrowatch.com/images/rating_large_16.png</RatingImageUrl>
         <LocalDistributorName>SF Film Finland Oy</LocalDistributorName>
         <GlobalDistributorName>SF Film Finland Oy</GlobalDistributorName>
         <ProductionCompanies>-</ProductionCompanies>
@@ -218,7 +218,7 @@ const String eventsXml = '''<?xml version="1.0"?>
         <Genres>Draama, Jännitys</Genres>
         <ShortSynopsis>Elokuva kertoo 16-vuotiaan John Paul Getty III:n (Charlie Plummer) kidnappauksesta ja hänen omistautuneen äitinsä Gailin (Michelle Williams) epätoivoisesta yrityksestä saada poikansa miljonääri isoisä (Christopher Plummer) maksamaan lunnaat.</ShortSynopsis>
         <Synopsis>Elokuva kertoo 16-vuotiaan John Paul Getty III:n (Charlie Plummer) kidnappauksesta ja hänen omistautuneen äitinsä Gailin (Michelle Williams) epätoivoisesta yrityksestä saada poikansa miljonääri isoisä (Christopher Plummer) maksamaan lunnaat. Getty vanhemman kieltäytyessä, ja sieppaajien muuttuessa yhä epävakaammiksi ja brutaalimmaksi, Gail yrittää vedota häneen. Poikansa elämän ollessa vaakalaudalla, Gailista ja Gettyn neuvonantajasta (Mark Wahlberg) muodostuu epätavalliset liittolaiset kilpailussa aikaa vastaan. Kilpailussa, joka lopulta paljastaa rakkauden todellisen arvon suhteessa rahaan.</Synopsis>
-        <EventURL>http://www.finnkino.fi/event/302478/title/all_the_money_in_the_world/</EventURL>
+        <EventURL>http://www.distrowatch.com/event/302478/title/all_the_money_in_the_world/</EventURL>
 
         <!-- Testing event without "Images" tag at all -->
 
@@ -274,11 +274,11 @@ const String eventsXml = '''<?xml version="1.0"?>
         <ContentDescriptors>
             <ContentDescriptor>
                 <Name>Violence</Name>
-                <ImageURL>https://media.finnkino.fi/images/content_Violence.png</ImageURL>
+                <ImageURL>https://media.distrowatch.com/images/content_Violence.png</ImageURL>
             </ContentDescriptor>
             <ContentDescriptor>
                 <Name>Disturbing</Name>
-                <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+                <ImageURL>https://media.distrowatch.com/images/content_Disturbing.png</ImageURL>
             </ContentDescriptor>
         </ContentDescriptors>
     </Event>

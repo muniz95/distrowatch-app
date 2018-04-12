@@ -20,7 +20,7 @@ void main() {
     final List<dynamic> actionLog = <dynamic>[];
     final Function(dynamic) next = (action) => actionLog.add(action);
 
-    MockFinnkinoApi mockFinnkinoApi;
+    MockDwApi mockDwApi;
     MockStore mockStore;
     ShowMiddleware middleware;
 
@@ -33,9 +33,9 @@ void main() {
     }
 
     setUp(() {
-      mockFinnkinoApi = new MockFinnkinoApi();
+      mockDwApi = new MockDwApi();
       mockStore = new MockStore();
-      middleware = new ShowMiddleware(mockFinnkinoApi);
+      middleware = new ShowMiddleware(mockDwApi);
 
       // Given
       when(mockStore.state).thenReturn(_theaterState(currentTheater: theater));
@@ -53,7 +53,7 @@ void main() {
         // passed. As new DateTime(2018) will mean the very first hour and minute
         // in January, all the show times in test assets will be after this date.
         Clock.getCurrentTime = () => startOf2018;
-        when(mockFinnkinoApi.getSchedule(theater, typed(any)))
+        when(mockDwApi.getSchedule(theater, typed(any)))
             .thenAnswer((_) => new Future.value(<Show>[
           new Show(start: new DateTime(2018, 02, 21)),
           new Show(start: new DateTime(2018, 02, 21)),
@@ -65,7 +65,7 @@ void main() {
             mockStore, new InitCompleteAction(null, theater), next);
 
         // Then
-        verify(mockFinnkinoApi.getSchedule(theater, null));
+        verify(mockDwApi.getSchedule(theater, null));
 
         expect(actionLog.length, 3);
         expect(actionLog[0], new isInstanceOf<InitCompleteAction>());
@@ -81,7 +81,7 @@ void main() {
       () async {
         // Given
         Clock.getCurrentTime = () => new DateTime(2018, 3);
-        when(mockFinnkinoApi.getSchedule(theater, typed(any)))
+        when(mockDwApi.getSchedule(theater, typed(any)))
             .thenAnswer((_) => new Future.value(<Show>[
                   new Show(start: new DateTime(2018, 02, 21)),
                   new Show(start: new DateTime(2018, 02, 21)),
@@ -93,7 +93,7 @@ void main() {
             mockStore, new ChangeCurrentDateAction(startOf2018), next);
 
         // Then
-        verify(mockFinnkinoApi.getSchedule(theater, startOf2018));
+        verify(mockDwApi.getSchedule(theater, startOf2018));
 
         expect(actionLog.length, 3);
         expect(actionLog[0], new isInstanceOf<ChangeCurrentDateAction>());
@@ -108,7 +108,7 @@ void main() {
       'when InitCompleteAction results in an error, should dispatch an ErrorLoadingShowsAction',
       () async {
         // Given
-        when(mockFinnkinoApi.getSchedule(typed(any), typed(any)))
+        when(mockDwApi.getSchedule(typed(any), typed(any)))
             .thenAnswer((_) => new Future.value(new Error()));
 
         // When

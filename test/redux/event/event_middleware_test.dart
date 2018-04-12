@@ -16,7 +16,7 @@ void main() {
     final List<dynamic> actionLog = <dynamic>[];
     final Function(dynamic) next = (action) => actionLog.add(action);
 
-    MockFinnkinoApi mockFinnkinoApi;
+    MockDwApi mockDwApi;
     EventMiddleware middleware;
 
     List<Event> nowInTheatersEvents = <Event>[
@@ -32,8 +32,8 @@ void main() {
     ];
 
     setUp(() {
-      mockFinnkinoApi = new MockFinnkinoApi();
-      middleware = new EventMiddleware(mockFinnkinoApi);
+      mockDwApi = new MockDwApi();
+      middleware = new EventMiddleware(mockDwApi);
     });
 
     tearDown(() {
@@ -43,9 +43,9 @@ void main() {
     test(
       'when called with InitCompleteAction, should dispatch a ReceivedEventsAction with now playing and upcoming events',
       () async {
-        when(mockFinnkinoApi.getNowInTheatersEvents(typed(any)))
+        when(mockDwApi.getNowInTheatersEvents(typed(any)))
             .thenAnswer((_) => new Future.value(nowInTheatersEvents));
-        when(mockFinnkinoApi.getUpcomingEvents())
+        when(mockDwApi.getUpcomingEvents())
             .thenAnswer((_) => new Future.value(upcomingEvents));
 
         await middleware.call(
@@ -64,9 +64,9 @@ void main() {
     test(
       'when called with ChangeCurrentTheaterAction, should request events for the new theater',
       () async {
-        when(mockFinnkinoApi.getNowInTheatersEvents(typed(any)))
+        when(mockDwApi.getNowInTheatersEvents(typed(any)))
             .thenAnswer((_) => new Future.value(nowInTheatersEvents));
-        when(mockFinnkinoApi.getUpcomingEvents())
+        when(mockDwApi.getUpcomingEvents())
             .thenAnswer((_) => new Future.value(upcomingEvents));
 
         await middleware.call(
@@ -81,7 +81,7 @@ void main() {
         );
 
         Theater captured =
-            verify(mockFinnkinoApi.getNowInTheatersEvents(typed(captureAny)))
+            verify(mockDwApi.getNowInTheatersEvents(typed(captureAny)))
                 .captured
                 .first;
         expect(captured.id, 'changed');
@@ -92,9 +92,9 @@ void main() {
     test(
       'when InitCompleteAction results in an error, should dispatch an ErrorLoadingEventsAction',
       () async {
-        when(mockFinnkinoApi.getNowInTheatersEvents(typed(any)))
+        when(mockDwApi.getNowInTheatersEvents(typed(any)))
             .thenAnswer((_) => new Future.value(new Error()));
-        when(mockFinnkinoApi.getUpcomingEvents())
+        when(mockDwApi.getUpcomingEvents())
             .thenAnswer((_) => new Future.value(new Error()));
 
         await middleware.call(

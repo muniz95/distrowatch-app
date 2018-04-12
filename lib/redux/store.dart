@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:distrowatchapp/data/networking/finnkino_api.dart';
+import 'package:distrowatchapp/data/networking/dw_api.dart';
 import 'package:distrowatchapp/data/networking/tmdb_api.dart';
 import 'package:distrowatchapp/redux/actor/actor_middleware.dart';
 import 'package:distrowatchapp/redux/app/app_reducer.dart';
@@ -14,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<Store<AppState>> createStore() async {
   var tmdbApi = new TMDBApi();
-  var finnkinoApi = new FinnkinoApi();
+  var dwApi = new DwApi();
   var prefs = await SharedPreferences.getInstance();
 
   return new Store(
@@ -24,8 +24,8 @@ Future<Store<AppState>> createStore() async {
     middleware: [
       new ActorMiddleware(tmdbApi),
       new TheaterMiddleware(rootBundle, prefs),
-      new ShowMiddleware(finnkinoApi),
-      new EventMiddleware(finnkinoApi),
+      new ShowMiddleware(dwApi),
+      new EventMiddleware(dwApi),
     ],
   );
 }

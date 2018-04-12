@@ -12,7 +12,7 @@ void main() {
       expect(jumanji.eventId, '302419');
       expect(jumanji.title, 'Jumanji: Welcome to the Jungle');
       expect(jumanji.originalTitle, 'Jumanji: Welcome to the Jungle (Original title)');
-      expect(jumanji.url, 'http://www.finnkino.fi/websales/show/1155306/');
+      expect(jumanji.url, 'http://www.distrowatch.com/websales/show/1155306/');
       expect(jumanji.presentationMethod, '2D');
       expect(jumanji.theaterAndAuditorium, 'Tennispalatsi, Helsinki, sali 6');
       expect(jumanji.start, new DateTime(2018, 02, 21, 10, 30));
@@ -48,7 +48,7 @@ const String showsXml = '''<?xml version="1.0"?>
             <dtLocalRelease>2017-12-22T00:00:00</dtLocalRelease>
             <Rating>12</Rating>
             <RatingLabel>12</RatingLabel>
-            <RatingImageUrl>https://media.finnkino.fi/images/rating_large_12.png</RatingImageUrl>
+            <RatingImageUrl>https://media.distrowatch.com/images/rating_large_12.png</RatingImageUrl>
             <EventType>Movie</EventType>
             <Genres>Komedia, Toiminta, Seikkailu, Fantasia</Genres>
             <TheatreID>1038</TheatreID>
@@ -59,24 +59,24 @@ const String showsXml = '''<?xml version="1.0"?>
             <PresentationMethodAndLanguage>2D</PresentationMethodAndLanguage>
             <PresentationMethod>2D</PresentationMethod>
             <EventSeries />
-            <ShowURL>http://www.finnkino.fi/websales/show/1155306/</ShowURL>
-            <EventURL>http://www.finnkino.fi/event/302419/title/jumanji_welcome_to_the_jungle/</EventURL>
+            <ShowURL>http://www.distrowatch.com/websales/show/1155306/</ShowURL>
+            <EventURL>http://www.distrowatch.com/event/302419/title/jumanji_welcome_to_the_jungle/</EventURL>
             <Images>
-                <EventMicroImagePortrait>http://media.finnkino.fi/1012/Event_11765/portrait_micro/Jumanji_1080u.jpg</EventMicroImagePortrait>
-                <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_11765/portrait_small/Jumanji_1080u.jpg</EventSmallImagePortrait>
-                <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_11765/portrait_medium/Jumanji_1080u.jpg</EventMediumImagePortrait>
-                <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_11765/portrait_small/Jumanji_1080u.jpg</EventLargeImagePortrait>
-                <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_11765/landscape_small/Jumanji_444.jpg</EventSmallImageLandscape>
-                <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_11765/landscape_large/Jumanji_670.jpg</EventLargeImageLandscape>
+                <EventMicroImagePortrait>http://media.distrowatch.com/1012/Event_11765/portrait_micro/Jumanji_1080u.jpg</EventMicroImagePortrait>
+                <EventSmallImagePortrait>http://media.distrowatch.com/1012/Event_11765/portrait_small/Jumanji_1080u.jpg</EventSmallImagePortrait>
+                <EventMediumImagePortrait>http://media.distrowatch.com/1012/Event_11765/portrait_medium/Jumanji_1080u.jpg</EventMediumImagePortrait>
+                <EventLargeImagePortrait>http://media.distrowatch.com/1012/Event_11765/portrait_small/Jumanji_1080u.jpg</EventLargeImagePortrait>
+                <EventSmallImageLandscape>http://media.distrowatch.com/1012/Event_11765/landscape_small/Jumanji_444.jpg</EventSmallImageLandscape>
+                <EventLargeImageLandscape>http://media.distrowatch.com/1012/Event_11765/landscape_large/Jumanji_670.jpg</EventLargeImageLandscape>
             </Images>
             <ContentDescriptors>
                 <ContentDescriptor>
                     <Name>Violence</Name>
-                    <ImageURL>https://media.finnkino.fi/images/content_Violence.png</ImageURL>
+                    <ImageURL>https://media.distrowatch.com/images/content_Violence.png</ImageURL>
                 </ContentDescriptor>
                 <ContentDescriptor>
                     <Name>Disturbing</Name>
-                    <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+                    <ImageURL>https://media.distrowatch.com/images/content_Disturbing.png</ImageURL>
                 </ContentDescriptor>
             </ContentDescriptors>
         </Show>
@@ -103,7 +103,7 @@ const String showsXml = '''<?xml version="1.0"?>
             <dtLocalRelease>2018-01-05T00:00:00</dtLocalRelease>
             <Rating>S</Rating>
             <RatingLabel>S</RatingLabel>
-            <RatingImageUrl>https://media.finnkino.fi/images/rating_large_S.png</RatingImageUrl>
+            <RatingImageUrl>https://media.distrowatch.com/images/rating_large_S.png</RatingImageUrl>
             <EventType>Movie</EventType>
             <Genres>Draama</Genres>
             <TheatreID>1034</TheatreID>
@@ -114,15 +114,15 @@ const String showsXml = '''<?xml version="1.0"?>
             <PresentationMethodAndLanguage>2D</PresentationMethodAndLanguage>
             <PresentationMethod>2D</PresentationMethod>
             <EventSeries />
-            <ShowURL>http://www.finnkino.fi/websales/show/1154395/</ShowURL>
-            <EventURL>http://www.finnkino.fi/event/302486/title/wonder/</EventURL>
+            <ShowURL>http://www.distrowatch.com/websales/show/1154395/</ShowURL>
+            <EventURL>http://www.distrowatch.com/event/302486/title/wonder/</EventURL>
             <Images>
-                <EventMicroImagePortrait>http://media.finnkino.fi/1012/Event_11832/portrait_micro/Wonder_1080.jpg</EventMicroImagePortrait>
-                <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_11832/portrait_small/Wonder_1080.jpg</EventSmallImagePortrait>
-                <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_11832/portrait_medium/Wonder_1080.jpg</EventMediumImagePortrait>
-                <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_11832/portrait_small/Wonder_1080.jpg</EventLargeImagePortrait>
-                <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_11832/landscape_small/Wonder_444.jpg</EventSmallImageLandscape>
-                <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_11832/landscape_large/Wonder_670.jpg</EventLargeImageLandscape>
+                <EventMicroImagePortrait>http://media.distrowatch.com/1012/Event_11832/portrait_micro/Wonder_1080.jpg</EventMicroImagePortrait>
+                <EventSmallImagePortrait>http://media.distrowatch.com/1012/Event_11832/portrait_small/Wonder_1080.jpg</EventSmallImagePortrait>
+                <EventMediumImagePortrait>http://media.distrowatch.com/1012/Event_11832/portrait_medium/Wonder_1080.jpg</EventMediumImagePortrait>
+                <EventLargeImagePortrait>http://media.distrowatch.com/1012/Event_11832/portrait_small/Wonder_1080.jpg</EventLargeImagePortrait>
+                <EventSmallImageLandscape>http://media.distrowatch.com/1012/Event_11832/landscape_small/Wonder_444.jpg</EventSmallImageLandscape>
+                <EventLargeImageLandscape>http://media.distrowatch.com/1012/Event_11832/landscape_large/Wonder_670.jpg</EventLargeImageLandscape>
             </Images>
             <ContentDescriptors />
         </Show>
@@ -149,7 +149,7 @@ const String showsXml = '''<?xml version="1.0"?>
             <dtLocalRelease>2018-01-19T00:00:00</dtLocalRelease>
             <Rating>7</Rating>
             <RatingLabel>7</RatingLabel>
-            <RatingImageUrl>https://media.finnkino.fi/images/rating_large_7.png</RatingImageUrl>
+            <RatingImageUrl>https://media.distrowatch.com/images/rating_large_7.png</RatingImageUrl>
             <EventType>Movie</EventType>
             <Genres>Draama, Musikaali, Elämäkerta</Genres>
             <TheatreID>1034</TheatreID>
@@ -160,24 +160,24 @@ const String showsXml = '''<?xml version="1.0"?>
             <PresentationMethodAndLanguage>2D</PresentationMethodAndLanguage>
             <PresentationMethod>2D</PresentationMethod>
             <EventSeries />
-            <ShowURL>http://www.finnkino.fi/websales/show/1153867/</ShowURL>
-            <EventURL>http://www.finnkino.fi/event/302492/title/the_greatest_showman/</EventURL>
+            <ShowURL>http://www.distrowatch.com/websales/show/1153867/</ShowURL>
+            <EventURL>http://www.distrowatch.com/event/302492/title/the_greatest_showman/</EventURL>
             <Images>
-                <EventMicroImagePortrait>http://media.finnkino.fi/1012/Event_11838/portrait_micro/TheGreatestShowman_1080.jpg</EventMicroImagePortrait>
-                <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_11838/portrait_small/TheGreatestShowman_1080.jpg</EventSmallImagePortrait>
-                <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_11838/portrait_medium/TheGreatestShowman_1080.jpg</EventMediumImagePortrait>
-                <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_11838/portrait_small/TheGreatestShowman_1080.jpg</EventLargeImagePortrait>
-                <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_11838/landscape_small/TheGreatestShowman_444.jpg</EventSmallImageLandscape>
-                <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_11838/landscape_large/TheGreatestShowman_670.jpg</EventLargeImageLandscape>
+                <EventMicroImagePortrait>http://media.distrowatch.com/1012/Event_11838/portrait_micro/TheGreatestShowman_1080.jpg</EventMicroImagePortrait>
+                <EventSmallImagePortrait>http://media.distrowatch.com/1012/Event_11838/portrait_small/TheGreatestShowman_1080.jpg</EventSmallImagePortrait>
+                <EventMediumImagePortrait>http://media.distrowatch.com/1012/Event_11838/portrait_medium/TheGreatestShowman_1080.jpg</EventMediumImagePortrait>
+                <EventLargeImagePortrait>http://media.distrowatch.com/1012/Event_11838/portrait_small/TheGreatestShowman_1080.jpg</EventLargeImagePortrait>
+                <EventSmallImageLandscape>http://media.distrowatch.com/1012/Event_11838/landscape_small/TheGreatestShowman_444.jpg</EventSmallImageLandscape>
+                <EventLargeImageLandscape>http://media.distrowatch.com/1012/Event_11838/landscape_large/TheGreatestShowman_670.jpg</EventLargeImageLandscape>
             </Images>
             <ContentDescriptors>
                 <ContentDescriptor>
                     <Name>Violence</Name>
-                    <ImageURL>https://media.finnkino.fi/images/content_Violence.png</ImageURL>
+                    <ImageURL>https://media.distrowatch.com/images/content_Violence.png</ImageURL>
                 </ContentDescriptor>
                 <ContentDescriptor>
                     <Name>Disturbing</Name>
-                    <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+                    <ImageURL>https://media.distrowatch.com/images/content_Disturbing.png</ImageURL>
                 </ContentDescriptor>
             </ContentDescriptors>
         </Show>
