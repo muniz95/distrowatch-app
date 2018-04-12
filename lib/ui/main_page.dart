@@ -11,6 +11,8 @@ import 'package:distrowatchapp/ui/showtimes/showtimes_page.dart';
 import 'package:distrowatchapp/ui/theater_list/distrowatch_drawer_header.dart';
 import 'package:distrowatchapp/ui/theater_list/theater_list.dart';
 
+import 'distros/distros_page.dart';
+
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => new _MainPageState();
@@ -28,7 +30,7 @@ class _MainPageState extends State<MainPage>
   @override
   void initState() {
     super.initState();
-    _controller = new TabController(length: 3, vsync: this);
+    _controller = new TabController(length: 4, vsync: this);
     _searchQuery = new TextEditingController();
   }
 
@@ -150,6 +152,7 @@ class _MainPageState extends State<MainPage>
             new Tab(text: 'Now in theaters'),
             new Tab(text: 'Showtimes'),
             new Tab(text: 'Coming soon'),
+            new Tab(text: 'Distros'),
           ],
         ),
       ),
@@ -165,6 +168,7 @@ class _MainPageState extends State<MainPage>
           new EventsPage(EventListType.nowInTheaters),
           new ShowtimesPage(),
           new EventsPage(EventListType.comingSoon),
+          new DistrosPage(),
         ],
       ),
     );

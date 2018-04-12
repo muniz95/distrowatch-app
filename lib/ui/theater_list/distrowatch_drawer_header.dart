@@ -58,7 +58,7 @@ class _DistrowatchDrawerHeaderState extends State<DistrowatchDrawerHeader> {
             style: textTheme.display1.copyWith(color: Colors.black),
           ),
           new Text(
-            'v1.0.1', // TODO: figure out a way to get this dynamically
+            'v0.0.1', // TODO: figure out a way to get this dynamically
             style: textTheme.body2.copyWith(color: Colors.black),
           ),
         ],
