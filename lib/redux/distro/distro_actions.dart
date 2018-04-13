@@ -1,9 +1,8 @@
 import 'package:distrowatchapp/data/models/distro.dart';
-import 'package:distrowatchapp/data/models/theater.dart';
 
 class FetchDistrosAction {
-  FetchDistrosAction(this.theater);
-  final Theater theater;
+  FetchDistrosAction(this.distro);
+  final Distro distro;
 }
 
 class RequestingDistrosAction {}

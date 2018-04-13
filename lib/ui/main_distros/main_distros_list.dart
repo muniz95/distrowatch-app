@@ -1,18 +1,17 @@
-import 'package:distrowatchapp/data/models/distro.dart';
+import 'package:distrowatchapp/data/models/main_distro.dart';
 import 'package:flutter/material.dart';
 import 'package:distrowatchapp/ui/common/info_message_view.dart';
 
-class DistrosList extends StatelessWidget {
+class MainDistrosList extends StatelessWidget {
   static final Key emptyViewKey = new Key('emptyView');
   static final Key contentKey = new Key('content');
 
-  DistrosList(this.distros, this.refreshDistros);
-  final List<Distro> distros;
-  final Function refreshDistros;
+  MainDistrosList(this.mainDistros);
+  final List<MainDistro> mainDistros;
 
   @override
   Widget build(BuildContext context) {
-    if (distros.isEmpty) {
+    if (mainDistros.isEmpty) {
       return new InfoMessageView(
         key: emptyViewKey,
         title: 'All empty!',
@@ -25,19 +24,21 @@ class DistrosList extends StatelessWidget {
       key: contentKey,
       child: new ListView.builder(
         padding: const EdgeInsets.only(bottom: 8.0),
-        itemCount: distros.length,
+        itemCount: mainDistros.length,
         itemBuilder: (BuildContext context, int index) {
-          var distro = distros[index];
+          var mainDistro = mainDistros[index];
 
           return new Column(
             children: <Widget>[
-              new Text(distro.name),
+              new Card(
+                child: new Text(mainDistro.name),
+              ),
+              new Card(
+                child: new Text(mainDistro.info),
+              ),
               new Divider(
                 height: 1.0,
-                color: Colors.black.withOpacity(0.25),
-              ),
-              new MaterialButton(
-                onPressed: () => this.refreshDistros(),
+                color: Colors.black,
               ),
             ],
           );

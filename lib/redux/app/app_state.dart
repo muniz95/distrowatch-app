@@ -1,6 +1,7 @@
 import 'package:distrowatchapp/data/models/actor.dart';
 import 'package:distrowatchapp/redux/distro/distro_state.dart';
 import 'package:distrowatchapp/redux/event/event_state.dart';
+import 'package:distrowatchapp/redux/main_distro/main_distro_state.dart';
 import 'package:distrowatchapp/redux/show/show_state.dart';
 import 'package:distrowatchapp/redux/theater/theater_state.dart';
 import 'package:meta/meta.dart';
@@ -13,6 +14,7 @@ class AppState {
     @required this.theaterState,
     @required this.showState,
     @required this.distroState,
+    @required this.mainDistroState,
     @required this.eventState,
   });
 
@@ -21,6 +23,7 @@ class AppState {
   final TheaterState theaterState;
   final ShowState showState;
   final DistroState distroState;
+  final MainDistroState mainDistroState;
   final EventState eventState;
 
   factory AppState.initial() {
@@ -30,6 +33,7 @@ class AppState {
       theaterState: new TheaterState.initial(),
       showState: new ShowState.initial(),
       distroState: new DistroState.initial(),
+      mainDistroState: new MainDistroState.initial(),
       eventState: new EventState.initial(),
     );
   }
@@ -40,6 +44,7 @@ class AppState {
     TheaterState theaterState,
     ShowState showState,
     DistroState distroState,
+    MainDistroState mainDistroState,
     EventState eventState,
   }) {
     return new AppState(
@@ -48,6 +53,7 @@ class AppState {
       theaterState: theaterState ?? this.theaterState,
       showState: showState ?? this.showState,
       distroState: distroState ?? this.distroState,
+      mainDistroState: mainDistroState ?? this.mainDistroState,
       eventState: eventState ?? this.eventState,
     );
   }
@@ -62,6 +68,7 @@ class AppState {
               theaterState == other.theaterState &&
               showState == other.showState &&
               distroState == other.distroState &&
+              mainDistroState == other.mainDistroState &&
               eventState == other.eventState;
 
   @override
@@ -71,5 +78,6 @@ class AppState {
       theaterState.hashCode ^
       showState.hashCode ^
       distroState.hashCode ^
+      mainDistroState.hashCode ^
       eventState.hashCode;
 }

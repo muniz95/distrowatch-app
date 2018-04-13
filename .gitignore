@@ -14,3 +14,5 @@ ios/Podfile.lock
 
 android/google-play-service-account.json
 android/key.properties
+
+*.log

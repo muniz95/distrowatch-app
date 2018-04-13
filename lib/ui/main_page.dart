@@ -10,8 +10,7 @@ import 'package:distrowatchapp/ui/events/events_page.dart';
 import 'package:distrowatchapp/ui/showtimes/showtimes_page.dart';
 import 'package:distrowatchapp/ui/theater_list/distrowatch_drawer_header.dart';
 import 'package:distrowatchapp/ui/theater_list/theater_list.dart';
-
-import 'distros/distros_page.dart';
+import 'package:distrowatchapp/ui/main_distros/main_distros_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -166,7 +165,7 @@ class _MainPageState extends State<MainPage>
         children: <Widget>[
           new EventsPage(EventListType.nowInTheaters),
           new ShowtimesPage(),
-          new DistrosPage(),
+          new MainDistrosPage(),
         ],
       ),
     );

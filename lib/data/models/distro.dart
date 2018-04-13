@@ -36,8 +36,10 @@ class Distro {
     distros.removeLast();
 
     return distros.map((node) {
+      String name = node.getElementsByClassName('NewsHeadline')[0].text;
+      String info = node.getElementsByClassName('NewsText')[0].text;
       return new Distro(
-        name: node.getElementsByClassName('NewsHeadline')[0].text,
+        name: name,
         osType: "",
         basedOn: "",
         origin: "",
@@ -47,7 +49,7 @@ class Distro {
         status: "",
         popularity: 0,
         hpd: 0,
-        info: "",
+        info: info,
       );
     }).toList();
 

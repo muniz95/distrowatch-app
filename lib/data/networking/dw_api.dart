@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:distrowatchapp/data/models/distro.dart';
 import 'package:distrowatchapp/data/models/event.dart';
+import 'package:distrowatchapp/data/models/main_distro.dart';
 import 'package:distrowatchapp/data/models/show.dart';
 import 'package:distrowatchapp/data/models/theater.dart';
 import 'package:distrowatchapp/utils/http_utils.dart';
@@ -58,5 +59,15 @@ class DwApi {
     );
 
     return Distro.parseAll(response);
+  }
+
+  Future<List<MainDistro>> getMainDistros() async {
+    var response = await getRequest(
+      dMainDistros.replace(queryParameters: {
+        'resource': 'major',
+      }),
+    );
+
+    return MainDistro.parseAll(response);
   }
 }
