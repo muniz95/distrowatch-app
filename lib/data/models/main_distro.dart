@@ -29,20 +29,47 @@ class MainDistro {
     distros.removeLast();
     distros.removeLast();
 
-    return distros.map((node) {
+    return distros.map(_parseMainDistroNode).toList();
+  }
+
+  static MainDistro _parseMainDistroNode(Element node) {
+      List<Element> topics = node.getElementsByTagName('li');
       String name = node.getElementsByClassName('NewsHeadline')[0].text;
       String info = node.getElementsByClassName('NewsText')[0].text;
+      List<String> pros = [];
+      List<String> cons = [];
+      List<String> packageManagement = [];
+      List<String> editions = [];
+      List<String> alternatives = [];
+      try {
+        pros = topics[0].text.substring(6).split(',');
+      } catch (e) {}
+
+      try {
+        cons = topics[1].text.substring(6).split(',');
+      } catch (e) {}
+
+      try {
+        packageManagement = topics[2].text.split(',');
+      } catch (e) {}
+
+      try {
+        editions = topics[3].text.split(',');
+      } catch (e) {}
+
+      try {
+        alternatives = topics[4].text.split(',');
+      } catch (e) {}
+
       return new MainDistro(
         name: name,
         info: info,
-        pros: [""],
-        cons: [""],
-        packageManagement: [""],
-        editions: [""],
-        alternatives: [""],
+        pros: pros,
+        cons: cons,
+        packageManagement: packageManagement,
+        editions: editions,
+        alternatives: alternatives,
         screenshot: "",
       );
-    }).toList();
-
   }
 }
