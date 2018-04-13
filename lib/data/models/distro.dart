@@ -1,4 +1,5 @@
-import 'package:xml/xml.dart' as xml;
+import 'package:html/dom.dart';
+import 'package:html/parser.dart' show parse;
 
 class Distro {
   Distro({
@@ -28,12 +29,15 @@ class Distro {
   final String info;
 
   static List<Distro> parseAll(String html) {
-    var document = xml.parse(html);
-    var distros = document.findAllElements('Event');
+    var document = parse(html);
+    List<Element> distros = document.getElementsByClassName('News1');
+    // The last two elements are not actual distros, so they must be removed
+    distros.removeLast();
+    distros.removeLast();
 
-    return distros.map((node) =>
-      new Distro(
-        name: "",
+    return distros.map((node) {
+      return new Distro(
+        name: node.getElementsByClassName('NewsHeadline')[0].text,
         osType: "",
         basedOn: "",
         origin: "",
@@ -44,7 +48,8 @@ class Distro {
         popularity: 0,
         hpd: 0,
         info: "",
-      )
-    ).toList();
+      );
+    }).toList();
+
   }
 }

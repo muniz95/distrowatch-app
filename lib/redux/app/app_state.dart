@@ -1,4 +1,5 @@
 import 'package:distrowatchapp/data/models/actor.dart';
+import 'package:distrowatchapp/redux/distro/distro_state.dart';
 import 'package:distrowatchapp/redux/event/event_state.dart';
 import 'package:distrowatchapp/redux/show/show_state.dart';
 import 'package:distrowatchapp/redux/theater/theater_state.dart';
@@ -11,6 +12,7 @@ class AppState {
     @required this.actorsByName,
     @required this.theaterState,
     @required this.showState,
+    @required this.distroState,
     @required this.eventState,
   });
 
@@ -18,6 +20,7 @@ class AppState {
   final Map<String, Actor> actorsByName;
   final TheaterState theaterState;
   final ShowState showState;
+  final DistroState distroState;
   final EventState eventState;
 
   factory AppState.initial() {
@@ -26,6 +29,7 @@ class AppState {
       actorsByName: <String, Actor>{},
       theaterState: new TheaterState.initial(),
       showState: new ShowState.initial(),
+      distroState: new DistroState.initial(),
       eventState: new EventState.initial(),
     );
   }
@@ -35,6 +39,7 @@ class AppState {
     Map<String, Actor> actorsByName,
     TheaterState theaterState,
     ShowState showState,
+    DistroState distroState,
     EventState eventState,
   }) {
     return new AppState(
@@ -42,6 +47,7 @@ class AppState {
       actorsByName: actorsByName ?? this.actorsByName,
       theaterState: theaterState ?? this.theaterState,
       showState: showState ?? this.showState,
+      distroState: distroState ?? this.distroState,
       eventState: eventState ?? this.eventState,
     );
   }
@@ -55,6 +61,7 @@ class AppState {
               actorsByName == other.actorsByName &&
               theaterState == other.theaterState &&
               showState == other.showState &&
+              distroState == other.distroState &&
               eventState == other.eventState;
 
   @override
@@ -63,5 +70,6 @@ class AppState {
       actorsByName.hashCode ^
       theaterState.hashCode ^
       showState.hashCode ^
+      distroState.hashCode ^
       eventState.hashCode;
 }

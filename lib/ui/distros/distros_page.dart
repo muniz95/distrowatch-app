@@ -31,7 +31,7 @@ class DistrosPageContent extends StatelessWidget {
             status: viewModel.status,
             loadingContent: new PlatformAdaptiveProgressIndicator(),
             errorContent: new ErrorView(onRetry: viewModel.refreshDistros),
-            successContent: new DistrosList(viewModel.shows),
+            successContent: new DistrosList(viewModel.distros, viewModel.refreshDistros),
           ),
         ),
       ],

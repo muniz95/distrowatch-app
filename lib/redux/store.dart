@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:distrowatchapp/redux/distro/distro_middleware.dart';
 import 'package:flutter/services.dart';
 import 'package:distrowatchapp/data/networking/dw_api.dart';
 import 'package:distrowatchapp/data/networking/tmdb_api.dart';
@@ -25,6 +26,7 @@ Future<Store<AppState>> createStore() async {
       new ActorMiddleware(tmdbApi),
       new TheaterMiddleware(rootBundle, prefs),
       new ShowMiddleware(dwApi),
+      new DistroMiddleware(dwApi),
       new EventMiddleware(dwApi),
     ],
   );

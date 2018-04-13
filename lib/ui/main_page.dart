@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage>
   @override
   void initState() {
     super.initState();
-    _controller = new TabController(length: 4, vsync: this);
+    _controller = new TabController(length: 3, vsync: this);
     _searchQuery = new TextEditingController();
   }
 
@@ -151,8 +151,7 @@ class _MainPageState extends State<MainPage>
           tabs: <Tab>[
             new Tab(text: 'Now in theaters'),
             new Tab(text: 'Showtimes'),
-            new Tab(text: 'Coming soon'),
-            new Tab(text: 'Distros'),
+            new Tab(text: 'Major distros'),
           ],
         ),
       ),
@@ -167,7 +166,6 @@ class _MainPageState extends State<MainPage>
         children: <Widget>[
           new EventsPage(EventListType.nowInTheaters),
           new ShowtimesPage(),
-          new EventsPage(EventListType.comingSoon),
           new DistrosPage(),
         ],
       ),

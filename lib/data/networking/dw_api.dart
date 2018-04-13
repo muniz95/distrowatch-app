@@ -9,11 +9,13 @@ import 'package:intl/intl.dart';
 
 class DwApi {
   static final DateFormat ddMMyyyy = new DateFormat('dd.MM.yyyy');
+  static final String baseURL = 'www.distrowatch.com';
 
   static final Uri kScheduleBaseUrl =
-      new Uri.https('www.distrowatch.com', '/en/xml/Schedule');
+      new Uri.https('www.finnkino.com', '/en/xml/Schedule');
   static final Uri kEventsBaseUrl =
-      new Uri.https('www.distrowatch.com', '/en/xml/Events');
+      new Uri.https('www.finnkino.com', '/en/xml/Events');
+  static final Uri dMainDistros = new Uri.https(baseURL, '/dwres.php');
 
   Future<List<Show>> getSchedule(Theater theater, DateTime date) async {
     var dt = ddMMyyyy.format(date ?? new DateTime.now());
@@ -50,8 +52,8 @@ class DwApi {
 
   Future<List<Distro>> getDistros() async {
     var response = await getRequest(
-      kEventsBaseUrl.replace(queryParameters: {
-        'listType': 'ComingSoon',
+      dMainDistros.replace(queryParameters: {
+        'resource': 'major',
       }),
     );
 
