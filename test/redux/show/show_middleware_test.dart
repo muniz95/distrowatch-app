@@ -108,8 +108,8 @@ void main() {
       'when InitCompleteAction results in an error, should dispatch an ErrorLoadingShowsAction',
       () async {
         // Given
-        when(mockDwApi.getSchedule(typed(any), typed(any)))
-            .thenAnswer((_) => new Future.value(new Error()));
+        // when(mockDwApi.getSchedule(typed(any), typed(any)))
+        //     .thenAnswer((_) => new Future.value(new Error()));
 
         // When
         await middleware.call(

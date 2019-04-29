@@ -92,10 +92,10 @@ void main() {
     test(
       'when InitCompleteAction results in an error, should dispatch an ErrorLoadingEventsAction',
       () async {
-        when(mockDwApi.getNowInTheatersEvents(typed(any)))
-            .thenAnswer((_) => new Future.value(new Error()));
-        when(mockDwApi.getUpcomingEvents())
-            .thenAnswer((_) => new Future.value(new Error()));
+        // when(mockDwApi.getNowInTheatersEvents(typed(any)))
+        //     .thenAnswer((_) => new Future.value(new Error()));
+        // when(mockDwApi.getUpcomingEvents())
+        //     .thenAnswer((_) => new Future.value(new Error()));
 
         await middleware.call(
             null, new InitCompleteAction(null, theater), next);

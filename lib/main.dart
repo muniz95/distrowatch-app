@@ -9,8 +9,8 @@ import 'package:distrowatchapp/ui/main_page.dart';
 import 'package:redux/redux.dart';
 
 Future<Null> main() async {
-  // ignore: deprecated_member_use
-  MaterialPageRoute.debugEnableFadingRoutes = true;
+  // // ignore: deprecated_member_use
+  // MaterialPageRoute.debugEnableFadingRoutes = true;
 
   var store = await createStore();
   runApp(new DistrowatchApp(store));
